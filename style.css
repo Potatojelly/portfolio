@@ -451,3 +451,29 @@ p {
 .box2 {
     flex-direction: row-reverse;
 }
+
+/* Contact */
+#contact {
+    background-color: var(--color-pink);
+}
+
+.contact__email,
+.contact__rights,
+.contact__title {
+    color:var(--color-white);
+}
+
+.contact__title {
+    margin: 32px 0;
+}
+
+.contact_links {
+    font-size: var(--font-large);
+    margin:24px 0;
+}
+
+.contact_links i:hover {
+    transform: scale(1.1);
+    color:yellow;
+    transition: var(--animation-duration) ease-in;
+}
