@@ -14,6 +14,10 @@
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
     --color-black: #000000;
+    --color-light-blue: #6CBFE9;
+    --color-light-purple: #ddddff;
+    --color-navy: #100C2D;
+    --color-brown: #816864;
     /* Font size */
     --font-large: 48px;
     --font-medium: 28px;
@@ -41,7 +45,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--color-white); 
+    color: black
 
 }
 
@@ -50,6 +54,13 @@ ul {
     padding-left:0;
 }
 
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    
+}
 /* Typography */
 h1 {
     font-size: var(--font-large);
@@ -84,9 +95,9 @@ p {
 #navbar {
     display:flex;
     justify-content: space-between;
-    background-color: var(--color-blue);
+    background-color: var(--color-light-blue);
     align-items: center;
-    color: var(--color-white);
+    color: var(--color-black);
     padding: 16px
 }
 
@@ -115,8 +126,6 @@ p {
     font-weight: var(--weight-semi-bold);
 }
 
-
-
 .logo {
     position: relative;
     top: 2px;
@@ -124,11 +133,41 @@ p {
     height:26px;
 }
 
-.home__avatar {
-    width:200px;
-    height:250x;
+/* Home **/
+#home {
+    background: url("imgs/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px;
+    text-align:center;
+
 }
 
+.home__avatar {
+    width:250px;
+    height:250px;
+    border-radius: 50%;
+    border:2px;
+    border-style:solid;
+    border-color:var(--color-light-white);
+    
+}
+
+.home__title,
+.home__description {
+    color: var(--color-black);
+}
+
+.home__contact {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-brown);
+    border-radius: 4px;
+    color : var(--color-brown);
+}
 .job__logo {
     width:66px;
     height:50px;
