@@ -111,12 +111,22 @@ p {
 
 /* Navbar */
 #navbar {
+    position:fixed;
+    width: 100%;
     display:flex;
     justify-content: space-between;
     background-color: var(--color-light-blue);
     align-items: center;
     color: var(--color-black);
-    padding: 16px
+    padding: 16px;
+    background-color: transparent;
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+    background-color: var(--color-light-blue);
+    padding:8px;
+    z-index: 1;
 }
 
 .navbar__menu {
@@ -167,9 +177,9 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     padding: 40px;
+    padding-top: 120px;
     text-align:center;
     margin:auto;
-
 }
 
 .home__avatar {
