@@ -9,10 +9,12 @@ document.addEventListener('scroll',() => {
     if(window.scrollY>navbarHeight)
     {
         navbar.classList.add('navbar--dark');
+        toggleBtn.classList.add('toggle-dark');
     }
     else
     {
         navbar.classList.remove('navbar--dark');
+        toggleBtn.classList.remove('toggle-dark');
     }
 
 });
@@ -29,9 +31,19 @@ navbarMenu.addEventListener('click', (event) => {
     {
         return;
     }
+    navbarMenu.classList.remove("open");
     scrollIntoView(link);
     
 });
+
+// Navbar Toggle button for small screen
+const toggleBtn = document.querySelector(".navbar__toggle-btn");
+
+toggleBtn.addEventListener("click",()=>{
+    navbarMenu.classList.toggle("open");
+})
+
+
 // Handle click on "contact me" button on hom
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click",(event) => {
@@ -107,3 +119,5 @@ workBtnContainer.addEventListener("click",(event) => {
         projectContainer.classList.remove("anim-out");
     },300);
 });
+
+
