@@ -46,9 +46,29 @@ function scrollIntoView(selector){
 
 // Make home slowly fade to transparent as the window scrolls down
 
-const home = document.querySelector(".home__container");
+const homeContainer = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 
 document.addEventListener('scroll',() => {
-    home.style.opacity = 1 - window.scrollY/homeHeight;
+    homeContainer.style.opacity = 1 - window.scrollY/homeHeight;
 });
+
+
+// show "arrow up" button when scrolling up
+const arrowUp = document.querySelector(".arrow__up");
+document.addEventListener('scroll',() => {
+    if(window.scrollY>homeHeight/2)
+    {
+        arrowUp.classList.add("visible");
+    }
+    else
+    {
+        arrowUp.classList.remove("visible");
+    }
+});
+
+arrowUp.addEventListener("click",()=>{
+    scrollIntoView("#home");
+})
+
+
