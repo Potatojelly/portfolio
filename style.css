@@ -180,7 +180,11 @@ p {
     padding-top: 120px;
     text-align:center;
     margin:auto;
+    opacity:1;
 }
+
+
+
 
 .home__avatar {
     width:250px;

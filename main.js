@@ -4,6 +4,7 @@
 
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
+
 document.addEventListener('scroll',() => {
     if(window.scrollY>navbarHeight)
     {
@@ -13,6 +14,7 @@ document.addEventListener('scroll',() => {
     {
         navbar.classList.remove('navbar--dark');
     }
+
 });
 
 // Handle scrolling when tapping on the navbar menu
@@ -40,4 +42,13 @@ homeContactBtn.addEventListener("click",(event) => {
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:'smooth'});
-}
+};
+
+// Make home slowly fade to transparent as the window scrolls down
+
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll',() => {
+    home.style.opacity = 1 - window.scrollY/homeHeight;
+});
