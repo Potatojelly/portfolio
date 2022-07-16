@@ -76,6 +76,7 @@ arrowUp.addEventListener("click",()=>{
 // Work
 ""
 const workBtnContainer = document.querySelector(".work__categories");
+const workBtns = document.querySelectorAll(".category__btn");
 const projectContainer = document.querySelector(".work__project");
 const projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click",(event) => {
@@ -84,6 +85,13 @@ workBtnContainer.addEventListener("click",(event) => {
     {
         return;
     }
+
+    // Remove selection from the previous item and select the new one
+    const active = document.querySelector(".category__btn.selected");
+    active.classList.remove('selected');
+    const target = event.target.nodeName === "BUTTON" ? event.target : event.target.parentNode;
+    target.classList.add('selected');
+
     projectContainer.classList.add('anim-out');
     setTimeout(()=>{
         projects.forEach((project) => {
