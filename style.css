@@ -215,6 +215,10 @@ p {
     height:50px;
 }
 
+.home__contact:hover {
+    background-color: var(--color-orange);
+}
+
 /* About */
 .about__majors {
     display:flex;
@@ -333,6 +337,7 @@ p {
     font-size:var(--font-regular);
     padding: 8px 48px;
     margin:10px 0;
+    position:relative;
 }
 
 .category__btn.selected,
@@ -346,20 +351,20 @@ p {
     background-color: var(--color-orange);
     border-radius: 50%;
     color:var(--color-white);
-    width:24px;
-    height:24px;
+    width:20px;
+    height:20px;
     display:inline-block;
-    line-height: 24px;
-    position:relative;
+    line-height: 20px;
+    position:absolute;
     top:-50px;
-    left:4px;
+    right:10px;
     opacity:0;
 }
 
 .category__btn.selected .category__count,
 .category__btn:hover .category__count{
     opacity: 1;
-    top:0;
+    top:7px;
     transition: all var(--animation-duration) ease-in;
 }
 
@@ -546,6 +551,14 @@ p {
 
 /*For below 768px screen width*/
 @media screen and (max-width:768px) {
+    :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+    }
     .navbar__toggle-btn {
         display:block;
     }
@@ -567,13 +580,20 @@ p {
         display:flex;
     }
 
+    .section {
+        padding:16px;
+        padding-top:40px;
+    }
+
     .about__majors {
         flex-direction: column;
         align-items: center;
+        margin-top:30px;
+        margin-bottom:0px;
     }
 
     .major {
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
 
     .skillset {
@@ -587,6 +607,34 @@ p {
     .testimonial__avatar {
         width:80px;
         height:80px;
+    }
+
+    .testimonial {
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .testimonial__speech-bubble {
+        order:1;
+    }
+
+    .testimonial__avatar:nth-child(even),
+    .testimonial__avatar:nth-child(odd) {
+        margin:0;
+        margin-bottom: 8px;
+    }
+    .category__btn {
+        width:100%;
+        margin:4px 0;
+    }
+
+    .arrow__up {
+        width:50px;
+        height:50px;
+        font-size:30px;
+        line-height:50px;
+        right:16px;
+        bottom:16px;
     }
 }
 
