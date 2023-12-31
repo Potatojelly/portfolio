@@ -1,269 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoon's Portfolio</title>
-    <meta name="description" content="Portfolio for Yoon"> 
-    <meta name="author" content="Yoon">
+    <!-- SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoon&#39;s Portfolio</title>
+    <meta name="description" content="Portfolio for Yoon" />
+    <meta name="author" content="Yoon" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <!-- OG(Open Graph Data) -->
+    <meta propety="og:title" content = "Yoon's Portfolio" />
+    <meta propety="og:type" content = "website" />
+    <meta propety="og:url" content = "TODO" />
+    <meta propety="og:image" content = "TODO" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/6ff7ddbc5e.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="imgs/id-card-regular.png">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JavaSCript -->
+    <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
+
 </head>
 <body>
-    <!-- Navbar -->
-    <nav id="navbar">
-        <div class="navbar__logo">
-            <img class="logo" alt="Yoon's profile logo" src="imgs/id-card-regular.png" >
-            <a href="#">Yoon</a>
-        </div>
-        <ul class="navbar__menu">
-            <li class="navbar__menu__item" data-link="#home">Home</li>
-            <li class="navbar__menu__item" data-link="#about">About</li>
-            <li class="navbar__menu__item" data-link="#skills">Skills</li>
-            <li class="navbar__menu__item" data-link="#work">My work</li>
-            <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
-            <li class="navbar__menu__item" data-link="#contact">Contact</li>
-        </ul>
-        <button class="navbar__toggle-btn">
+    <!-- Header -->
+    <header class="header">
+        <div class="header__logo">
+            <img class="header__logo__img "src="images/picture.png" alt="logo">
+            <h1 class="header_logo__title"><a href="#">Yoon</a></h1>
+        </div>    
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li>
+                    <a class="header__menu__item active" href="#home">Home</a>
+                </li>
+                <li><a class="header__menu__item" href="#about">About</a></li>
+                <li><a class="header__menu__item" href="#skills">Skills</a></li>
+                <li><a class="header__menu__item" href="#work">My work</a></li>
+                <li><a class="header__menu__item" href="#testimonial">Testominals</a></li>
+                <li><a class="header__menu__item" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="header__toggle" aria-label="navigation menu toggle">  
             <i class="fa-solid fa-bars"></i>
         </button>
-    </nav>
-    <!-- Home -->
-    <section id="home">
-        <div class="home__container">
-            <img src="imgs/profilepic.jpg" alt="Yoon's profile photo" class="home__avatar">
-            <h1 class="home__title">Hello, <br> I'm Yoon Lee</h1>
-            <h2 class="home__description">
-                A student majoring in Computer Science & Software Engineering in University of Washington Bothell
-            </h2>
-            <button class="home__contact" data-link="#contact">Contact me</button>
-        </div>
-        <!-- Arrow-->
-    </section>
-    <!-- About -->
-    <section id="about" class="section section__container">
-        <h1>About me</h1>
-        <p>
-            I'm interested in both front-end and back-end development. As of now, I planned to make a project related to front-end 
-            and another project related to back-end. I'm learning JavaScript,HTML,and CSS.
-            I'm also looking forward to learning React,NodeJS,MySQL,MongoDB,etc for the projects.
-        </p>
-        <div class="about__majors">
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fa-brands fa-html5"></i>
-                </div>
-                <h2 class="major__title">Front-end</h2>
-                <div class="major__description">HTML, CSS, JavaScript</div>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Home -->
+        <section id="home">
+            <div class="home__container">
+                <img class="home__image" src="images/picture.png" alt="Yoon's profile">
+                <h2 class="home__title" aria-label="Hello I'm DreamCoder Yoon">Hello <br> I&#39;m 
+                    <strong class="home__title--strong">a Software Engineer</strong>, Yoon</h2>
+                <p class="home_description">Majored in Computer Science & Software Engineering in University of Washington Bothell</p>
+                <a class="home__contact" href="#contact">Contact Me</a>
             </div>
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h2 class="major__title">Back-end</h2>
-                <div class="major__description">Java, JavaScript</div>
-            </div>
-        </div>
-        <div class="about__jobs">
-            <div class="job">
-                <img src="imgs/uwb.jpg" alt="UWB" class="job__logo">
-                <div class="job__description">
-                    <p class="job__name">Currently majoring in Computer Science & Software Engineering in University of Washington Bothell</p>
-                    <p class="job__period">2022 Jan - Until now</p>
-                </div> 
-            </div>
-        </div>
-        
-    </section>
-    <!-- Skills -->
-    <section id="skills" class="section">
-        <div class="section__container">
-            <h1>Skills</h1>
-            <h2>Skills & Attributes</h2>
-            <p>
-                Passion for learning new technologies. Capable of working within a team enviornment and independently.
-                Ability to plan and time schedule, work under strict time pressure and adapt quickly when needed. 
+        </section>
+        <!-- About -->
+        <section id="about" class="section max-container">
+            <h2 class="title">About me</h2>
+            <p class="description">            
+                I'm interested in both front-end and back-end development. As of now, I have learned basic front-end and back-end skills and knoweldge 
+                through individual projects.
+                I'm eager to learn new technologies.
             </p>
-            <div class="skillset">
-                <div class="skillset__left">
-                    <h3 class="skillset__title">Skills</h3>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>HTML</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill_value" style="width: 90%;">
-    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>CSS</span>
-                            <span>90%</span>
-                        </div>    
-                        <div class="skill__bar">
-                            <div class="skill_value" style="width: 90%;">
-    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>JavaScript</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill_value" style="width: 80%;">
-    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>Java</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill_value" style="width: 80%;">
-    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>C++</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill_value" style="width: 88%;">
-    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>Phyton</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill_value" style="width: 80%;">
-    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skillset__right">
-                    <div class="tools">
-                        <h3 class="skillset__title">Tools</h3>
-                        <ul class="tools_list">
-                            <li><span>Visual Studio Code</span></li>
-                            <li><span>Visual Studio</span></li>
-                            <li><span>Eclipse</span></li>
+            <ul class="majors">
+                <li class="major">
+                    <i class="fa-brands fa-html5 major__icon"></i>
+                    <p class="major__title">Front-end</p>
+                    <p>HTML,CSS,JavaScript,React,Web APIs</p>
+                </li>
+                <li class="major">
+                    <i class="fa-solid fa-server major__icon"></i>
+                    <p class="major__title">Back-end</p>
+                    <p>Node.js,SQL,NoSQL,Rest APIs</p>
+                </li>
+            </ul>
+            <ul class="jobs">
+                <li class="job">
+                    <img class="job__image" src="images/uwb.jpg" alt="school logo">
+                    <div class="job__description">
+                        <p class="job__title">Computer Science & Software Engineering in University of Washington Bothell</p>
+                        <p class="job__period">2022 Jan - 2023 Dec </p>
+                    </div> 
+                </li>
+            </ul>
+        </section>
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="max-container">
+                <h2 class="title">My Skills</h2>
+                <p class="description"> Skills & Attributes </p>
+                <p>
+                    Passion for learning new technologise. Capable of working within a team environment and independently.
+                </p>
+                <div class="skills">
+                    <section class="skills__coding">
+                        <h3 class="skills__title">Coding Skills</h3>
+                        <ul>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>HTML</span><span>95%</span>
+                                </div>
+                                <div class="bar__bg"><div class="bar__value" style="width: 95%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>CSS</span><span>95%</span>
+                                </div>
+                                <div class="bar__bg"><div class="bar__value" style="width: 95%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>JavaSCript</span><span>90%</span>
+                                </div> 
+                                <div class="bar__bg"><div class="bar__value" style="width: 90%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>React</span><span>90%</span>
+                                </div>
+                                <div class="bar__bg"><div class="bar__value" style="width: 90%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>C/C++</span><span>80%</span>
+                                </div>
+                                <div class="bar__bg"><div class="bar__value" style="width: 80%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>NodeJS</span><span>80%</span>
+                                </div> 
+                                <div class="bar__bg"><div class="bar__value" style="width: 80%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>Pyhton</span><span>70%</span>
+                                </div> 
+                                <div class="bar__bg"><div class="bar__value" style="width: 70%"></div></div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>Java</span><span>60%</span>
+                                </div>    
+                                <div class="bar__bg"><div class="bar__value" style="width: 60%"></div></div>
+                            </li>
                         </ul>
-                    </div>
-                    <div class="etc">
-                        <h3 class="skillset__title">Etc</h3>
-                        <ul class="etc__list">
-                            <li><span>Git</span></li>
+                    </section>
+                    <section class="skills__tools">
+                        <h3 class="skills__title">Tools</h3>
+                        <ul>
+                            <li>Visual Stuido</li>
+                            <li>Visual Stuido Code</li>
+                            <li>IntelliJ</li>
+                            <li>Eclipse</li>
                         </ul>
-                    </div>
+                    </section>
+                    <section class="skills__etc">
+                        <h3 class="skills__title">Etc</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Linux</li>
+                            <li>AWS</li>
+                        </ul>
+                    </section>
                 </div>
             </div>
-        </div>
-        
-    </section>
-    <!-- Work -->
-    <section id="work" class="section">
-        <div class="section__container"></div>
-            <h1>My work</h1>
-            <h3>Projects</h3>
-            <div class="work__categories">
-                <button class="category__btn selected" data-filter="*">All <span class="category__count">8</span></button>
-                <button class="category__btn" data-filter="front-end">Front-end <span class="category__count">4</span></button>
-                <button class="category__btn" data-filter="back-end">Back-end <span class="category__count">4</span></button>
+        </section>
+        <!-- Work -->
+        <section id="work" class="section">
+            <div class="max-container">
+                <h2 class="title">My Work</h2>
+                <p class="description">Projects</p>
+                <ul class="categories">
+                    <li><button class="category category--selected" data-category="all">All<span class="category__count">6</span></button></li>
+                    <li><button class="category" data-category="front-end">Front-end<span class="category__count">3</span></button></li>
+                    <li><button class="category" data-category="back-end">Back-end<span class="category__count">3</span></button></li>
+                </ul>
+                <ul class="projects">
+                    <li class="project" data-type="front-end">
+                        <a href="https://github.com/Potatojelly/CarrotCollectGame" taget="blank">
+                            <img class="project__img" src="images/game.png" alt="proeject1">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Game</h3>
+                                <p>A catching bugs game</p> 
+                            </div>
+                        </a> 
+                    </li>
+                    <li class="project" data-type="front-end">
+                        <a href="https://github.com/Potatojelly/TodoList" taget="blank">
+                            <img class="project__img" src="images/Todo.png" alt="proeject2">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Todo List</h3>
+                                <p>A simple ToDo List application</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project" data-type="front-end">
+                        <a href="https://github.com/Potatojelly/YoutubeClone" taget="blank">
+                            <img class="project__img" src="images/YoonTube.png" alt="proeject3">
+                            <div class="project__metadata">
+                                <h3 class="project__title">YoonTube</h3>
+                                <p>A project aiming to replicate some features of YouTube</p>
+                            </div>
+                        </a>    
+                    </li>
+                    <li class="project" data-type="back-end">
+                        <a href="https://github.com/Potatojelly/Shoppy" taget="blank">
+                            <img class="project__img" src="images/Shoppy.png" alt="proeject4">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Shoppy</h3>
+                                <p>A simple online shopping mall site</p>
+                            </div>
+                        </a>    
+                    </li>
+                    <li class="project" data-type="back-end">
+                        <a href="https://github.com/Potatojelly/Ywitter" taget="blank">
+                            <img class="project__img" src="images/Ywitter.png" alt="proeject5">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Ywitter</h3>
+                                <p>A project aiming to replicate some features of Twitter</p>
+                            </div>
+                        </a>    
+                    </li>
+                    <li class="project" data-type="back-end">
+                        <a href="https://github.com/Potatojelly/HoopHub" taget="blank">
+                            <img class="project__img" src="images/HoopHub.png" alt="proeject6">
+                            <div class="project__metadata">
+                                <h3 class="project__title">Hoop Hub</h3>
+                                <p>SNS for basketball players</p>
+                            </div>
+                        </a>    
+                    </li>
+                </ul>
             </div>
-            <div class="work__project">
-                <a href="https://github.com/Potatojelly/portfolio" class="project" taget="blank" data-type="front-end">
-                    <img src="imgs/project1.png" alt="Project1" class="project__img">
-                    <div class="project__description">
-                        <h3>Project1 Site</h3>
-                        <span>Clone coding with HTML and CSS</span>
+        </section>
+        <!-- Testominals -->
+        <section id="testimonial" class="section max-container">
+            <h2 class="title">Testominals</h2>
+            <p class="description">See what they say about me</p>
+            <ul class="testimonials">
+                <li class="testimonial">
+                    <img class="testimonial__img" src="images/profilepicture.png" alt="people1">
+                    <div class="testimonial__bubble">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p><a href="#" class="testimonial__bublle__name">John Doe</a> /Company</p>
                     </div>
-                </a>
-                <a href="https://github.com/Potatojelly/portfolio" class="project" taget="blank" data-type="front-end">
-                    <img src="imgs/project2.png" alt="Project2" class="project__img">
-                    <div class="project__description">
-                        <h3>Project2 Site</h3>
-                        <span>Clone coding with HTML and CSS</span>
+                </li>
+                <li class="testimonial">
+                    <img class="testimonial__img" src="images/profilepicture.png" alt="people1">
+                    <div class="testimonial__bubble">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p><a href="#" class="testimonial__bublle__name">John Doe</a> /Company</p>
                     </div>
-                </a>
-                <a href="https://github.com/Potatojelly/portfolio" class="project" taget="blank" data-type="back-end">
-                    <img src="imgs/project3.png" alt="Project3" class="project__img">
-                    <div class="project__description">
-                        <h3>Project3 Site</h3>
-                        <span>Clone coding with HTML and CSS</span>
+                </li>
+                <li class="testimonial">
+                    <img class="testimonial__img" src="images/profilepicture.png" alt="people1">
+                    <div class="testimonial__bubble">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p><a href="#" class="testimonial__bublle__name">John Doe</a> /Company</p>
                     </div>
-                </a>
-            </div>
+                </li>
+            </ul>
+        </section>
+        <!-- Arrow up -->
+        <aside>
+            <a class="arrow-up" href="#home" title="back to top"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+        </aside>
+    </main>
+    <!-- Footer -->
+    <footer id="contact" class="section">
+        <div class="max-container">
+            <h2 class="title">Let&#39;s talk</h2>
+            <p class="description">yoonleeS0324@gmail.com</p>
+            <ul class="contact__links">
+                <li>
+                    <a class="contact__link" href="https://github.com/Potatojelly" title="my github link" target="blank"><i class="fa-brands fa-github"></i></a>
+                    <a class="contact__link" href="https://www.linkedin.com/in/yoon-lee-0926112a5/" title="my linkedin link" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+            </ul>
+            <p>Yoon-All rights reserved</p>
         </div>
-    </section>
-    <!-- Testimonials -->
-    <section id="testimonials" class="section">
-        <div class="section__container"></div>
-            <div class="testmoinals">
-                <h1>Testimonials</h1>
-                <h3>See what they say about me</h3>
-                <div class="testimonial">
-                    <img src="imgs/people1.png" alt="person1" class="testimonial__avatar">
-                    <div class="testimonial__speech-bubble">
-                        <p class="words">
-                            To do To do To do To do To do To do To do To do To do To do To do To do To do ToTo do To do To do To do To do To do To do To do To do To do To dTo do To do To do To do To do To do To do To do To do To do To do To do To do ToTo do To do To do To do To do To do To do To do To do To do o To do To do To doTo do To do
-                        </p>
-                        <p class="name">
-                            <a href="">Person1Name</a>
-                            / Samsung
-                        </p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial__speech-bubble">
-                        <p class="words">
-                            To do To do To do To do To do To do To do To do To do To do To do To do To do ToTo do To do To do To do To do To do To do To do To To do To do To do To do To do To do To do To do To do To do To do To do To do ToTo do To do To do To do To do To do To do To do To do To do do To do  To doTo do To do
-                        </p>
-                        <p class="name">
-                            <a href="">Person2Name</a>
-                            / Samsung
-                        </p>
-                    </div>
-                    <img src="imgs/people1.png" alt="person2" class="testimonial__avatar">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <h1 class="contact__title">Let's talk</h1>
-        <h2 class="contact__email">yoonlee@uw.edu</h2>   
-        <div class="contact_links">
-            <a href="https://github.com/Potatojelly" target="blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <div class="contact__rights">
-            2022 Yoon - All rights reserved
-        </div>
-    </section>
-    <!-- Arrow up-->
-    <button class="arrow__up"> 
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    </footer>
 </body>
 </html>
